@@ -4,6 +4,7 @@ Transform:
 
 Description: Lambda CloudFormation Lab
 Resources:
+
   LambdaRole:
     Type: AWS::IAM::Role
     Properties:
