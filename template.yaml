@@ -117,3 +117,18 @@ Resources:
           AttributeType: S
         - AttributeName: sk
           AttributeType: S
+     
+          
+  TableName:
+    Type: AWS::SSM::Parameter
+    Properties:
+      Name: "users-app/dynamoDB/usersTable"
+      Type: String
+      Value: !Ref UsersTable
+  
+  TableARN:
+    Type: AWS::SSM::Parameter
+    Properties:
+      Name: "users-app/dynamoDB/tableArn"
+      Type: String
+      Value: !GetAtt UsersTable.Arn
