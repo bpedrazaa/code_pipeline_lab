@@ -122,13 +122,13 @@ Resources:
   TableName:
     Type: AWS::SSM::Parameter
     Properties:
-      Name: "users-app/dynamoDB/usersTable"
+      Name: "/users-app/dynamoDB/usersTable"
       Type: String
       Value: !Ref UsersTable
   
   TableARN:
     Type: AWS::SSM::Parameter
     Properties:
-      Name: "users-app/dynamoDB/tableArn"
+      Name: "/users-app/dynamoDB/tableArn"
       Type: String
       Value: !GetAtt UsersTable.Arn
